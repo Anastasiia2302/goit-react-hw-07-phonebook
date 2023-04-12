@@ -1,28 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
+import { contactsReducer } from "./contactsSlice";
+import { filtersReducer } from "./filterSlice";
 
-const contactsSlice = createSlice({
-  name: 'contacts',
-  initialState: {
-    items: [],
-    isLoading: false,
-    error: null,
-  },
 
-  reducers: {
-    fetchContacts(state) {
-      state.isLoading = true;
-    },
-    addContact(state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = action.payload;
-    },
-
-    deleteContact(state, action) {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
-  },
-});
-
-export const { addContacts, deleteContacts } = contactsSlice.actions;
+export const store = configureStore({
+  reducer: {
+    contacts: contactsReducer,
+    filters: filtersReducer,
+  }
+})
