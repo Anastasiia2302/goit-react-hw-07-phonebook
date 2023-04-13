@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   margin: 0 auto;
   margin-top:10px;
+  margin-bottom:10px;
   width: 600px;
   background-color: beige;
   border: solid 3px black;
@@ -11,8 +12,8 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   font-size: 24px;
-  padding: 0;
-  margin: 0;
+  margin-left:10px;
+  margin-bottom:0;
 `;
 
 export const Forma = styled(Form)`
@@ -27,6 +28,7 @@ export const Wrap = styled.div`
 `;
 export const Label = styled.label`
   font-size: 22px;
+  margin-top:10px;
 `;
 
 export const Input = styled(Field)`
@@ -53,6 +55,7 @@ export const Btn = styled.button`
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
+  border-radius: 12px;
 `;
 
 export const WrapFilter = styled.div`
@@ -63,6 +66,7 @@ export const WrapFilter = styled.div`
 
 export const FilterLabel = styled.label`
   font-size: 22px;
+  margin-bottom: 10px;
 `;
 
 export const FilterInput = styled.input`
