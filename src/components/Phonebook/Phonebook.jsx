@@ -12,7 +12,7 @@ import {
 } from 'components/PhoneBook.styled';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+
 
 
 const nanoid = customAlphabet('1234567890', 3);
